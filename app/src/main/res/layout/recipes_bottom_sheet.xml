@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context=".RecipesBottomSheet">
+
+
+        <com.todkars.shimmer.ShimmerRecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            app:shimmer_recycler_item_count="5"
+            app:shimmer_recycler_layout="@layout/item_food_recipe_shimmer" />
+
+
+        <Button
+            android:id="@+id/apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/purple_700"
+            android:clipToPadding="false"
+            android:text="@string/apply" />
+
+    </LinearLayout>
+</layout>
